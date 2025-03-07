@@ -52,14 +52,18 @@ export class RegisterComponent implements OnInit {
   register() {
     const dob = this.GetDateOnly(this.registerForm.controls['dateOfBirth'].value)
     const values = {...this.registerForm.value, dateOfBirth: this.GetDateOnly(dob)}
-    this.accountService.register(values).subscribe({
-      next: response => {
-        this.router.navigateByUrl('/members');
+    this.accountService.register(this.model).subscribe({
+      next: () => {
+        this.cancel();
       },
-      error: error => {
-        this.validationErrors = error;
-      } 
-    })
+      error: (error) => {
+        if (error.error && Array.isArray(error.error)) {
+          this.validationErrors = error.error; // This will only assign errors if they are arrays
+        } else {
+          console.log(error); // Log the error to check what the backend is returning
+        }
+      }
+    });
   }
 
   cancel() {
