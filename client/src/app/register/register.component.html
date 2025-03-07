@@ -29,9 +29,11 @@
         [label]="'Confirm Password'" [type]="'password'"></app-text-input>
 
     <div class="row" *ngIf="validationErrors">
-        <ul *ngIf="validationErrors">
-            <li *ngFor="let error of validationErrors">{{ error }}</li>
+        <ul *ngFor="let error of validationErrors">
+            <li>{{ error }}</li>
           </ul>
+          
+          
           
     </div>
     
