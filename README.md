@@ -40,7 +40,7 @@ DatingApp is a modern web application designed to connect users seamlessly and i
 ### Prerequisites
 - Install Node.js (Latest version)
 - Install Angular CLI
-- Install .NET SDK (Version 7 or later)
+- Install .NET SDK (Version 9 or later)
 - Install SQL Server
 
 ### Steps to Run the Project
