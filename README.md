@@ -47,6 +47,6 @@ DatingApp is a modern web application designed to connect users seamlessly and i
 
 #### Clone the Repository:
 ```sh
-git clone https://github.com/your-repo-url.git
-cd DatingApp-DotNet7Angular1
+git clone https://github.com/Bawakil8877/DatingApp.git
+
 
