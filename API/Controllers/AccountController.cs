@@ -46,7 +46,6 @@ public class AccountController : BaseApiController
             Gender = user.Gender
         };
     }
-
     [HttpPost("login")]
     public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
     {
@@ -69,6 +68,8 @@ public class AccountController : BaseApiController
             Gender = user.Gender
         };
     }
+
+
 
     private async Task<bool> UserExists(string username)
     {
